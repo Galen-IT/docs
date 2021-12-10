@@ -1,0 +1,13 @@
+# GalenIT SDK
+- [Введение](docs/intro.md)
+- Интеграция SDK
+  - [Android](docs/android)
+    - [Начало работы](docs/android/getstarted.md)
+    - [Примеры использования методов](docs/android/examples.md)
+    - [Справочник](docs/android/guide)
+      - [com.*](docs/android/guide)
+        - Интерфейсы
+        - Классы
+        - Перечисления
+        - Представления
+    - [Описание ошибок](docs/android/errors.md)  
