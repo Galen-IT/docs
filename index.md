@@ -3,11 +3,10 @@
 - Интеграция SDK
   - [Android](docs/android)
     - [Начало работы](docs/android/getstarted.md)
-    - [Примеры использования методов](docs/android/examples.md)
-    - [Справочник](docs/android/guide)
-      - [com.*](docs/android/guide)
-        - Интерфейсы
-        - Классы
-        - Перечисления
-        - Представления
+    - [Примеры](docs/android/examples)
+      - [Инициализация библиотеки](docs/android/examples/sample.md)
+      - [Измерение по лицу](docs/android/examples/measurement_by_face.md)
+      - [Измерение по пальцу](docs/android/examples/measurement_by_finger.md)
+      - [Разовое измерение устройством](docs/android/examples/measurement_by_simple_device.md)
+      - [Длительное измерение устройством](docs/android/examples/measurement_by_advanced_device.md)
     - [Описание ошибок](docs/android/errors.md)  
