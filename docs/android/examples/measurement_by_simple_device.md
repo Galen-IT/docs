@@ -18,7 +18,12 @@
   <application>...</application>
 </manifest>
 ```
-2. Запросите разрешения в методе _onCreate_ MainActivity
+2. Импортируйте необходимые пакеты
+```kotlin
+import com.galenit.device.api.lib.GalenIT
+import com.galenit.device.api.parameter.Parameter
+```
+3. Запросите разрешения в методе _onCreate_ MainActivity
 ```kotlin
 ActivityCompat.requestPermissions(
     this,
@@ -34,7 +39,7 @@ ActivityCompat.requestPermissions(
     1
 )
 ```   
-3. После проверки требуемых разрешений инициализируйте работу библиотеки с лицензионным ключом
+4. После проверки требуемых разрешений инициализируйте работу библиотеки с лицензионным ключом
 ```kotlin
 CoroutineScope(Dispatchers.Main).launch {
   try {
@@ -48,7 +53,7 @@ CoroutineScope(Dispatchers.Main).launch {
   }
 }
 ```
-3. Получите разовое измерение с помощью прибора
+5. Получите разовое измерение с помощью прибора
 ```kotlin
 CoroutineScope(Dispatchers.Main).launch {
     val parameterMeasurement = Parameter.PulseRate::class

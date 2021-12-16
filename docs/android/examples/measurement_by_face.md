@@ -44,7 +44,15 @@
 
 > Обратите внимание на параметр **app:mode** - он отвечает за то, как будет отображен компонент
 
-3. Запросите разрешения в методе _onCreate_ MainActivity
+3. Импортируйте необходимые пакеты
+```kotlin
+import com.galenit.device.api.lib.GalenIT
+import com.galenit.component.binah.BinahView
+import com.galenit.device.api.base.WavePartListener
+import com.galenit.device.api.parameter.Parameter
+```
+
+4. Запросите разрешения в методе _onCreate_ MainActivity
 ```kotlin
 ActivityCompat.requestPermissions(
     this,
@@ -60,7 +68,7 @@ ActivityCompat.requestPermissions(
     1
 )
 ```   
-4. После проверки требуемых разрешений инициализируйте работу библиотеки с лицензионным ключом
+5. После проверки требуемых разрешений инициализируйте работу библиотеки с лицензионным ключом
 ```kotlin
 CoroutineScope(Dispatchers.Main).launch {
   try {
@@ -74,7 +82,7 @@ CoroutineScope(Dispatchers.Main).launch {
   }
 }
 ```
-5. Передайте события onFace и onFaceHide и добавьте методы запуска и остановки измерений:
+6. Передайте события onFace и onFaceHide и добавьте методы запуска и остановки измерений:
 ```kotlin
 binding.cameraView.onFace = { bitmap, _ ->
   // ...
@@ -91,7 +99,7 @@ binding.cameraView.startMeasurements() // запустить представл�
 // binding.cameraView.startWithoutMeasurements() // запустить представление без измерения
 
 ```
-6. Добавьте подписчики на получение параметров измерения
+7. Добавьте подписчики на получение параметров измерения
 ```kotlin
 binding.cameraView.startWithoutMeasurements()
 CoroutineScope(Dispatchers.Main).launch {

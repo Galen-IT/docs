@@ -1,4 +1,5 @@
 # Пример приложения
+Импортируйте пакет GalenIT `import com.galenit.device.api.lib.GalenIT` и инициализируйте библиотеку с лицензионным ключом методом `GalenIT.start(LICENSE_KEY)`
 
 ```kotlin
 package com.galenit.sampleusagesdk

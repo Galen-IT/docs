@@ -35,8 +35,14 @@
 - **sessionTime** - время сессии измерения;
 
 > Обратите внимание на параметр **app:mode** - он отвечает за то, как будет отображен компонент
-
-3. Запросите разрешения в методе _onCreate_ MainActivity
+3. Импортируйте необходимые пакеты
+```kotlin
+import com.galenit.device.api.lib.GalenIT
+import com.galenit.component.binah.BinahView
+import com.galenit.device.api.base.WavePartListener
+import com.galenit.device.api.parameter.Parameter
+```
+4. Запросите разрешения в методе _onCreate_ MainActivity
 ```kotlin
 ActivityCompat.requestPermissions(
     this,
@@ -51,8 +57,8 @@ ActivityCompat.requestPermissions(
     ),
     1
 )
-```   
-4. После проверки требуемых разрешений инициализируйте работу библиотеки с лицензионным ключом
+```
+5. После проверки требуемых разрешений инициализируйте работу библиотеки с лицензионным ключом
 ```kotlin
 CoroutineScope(Dispatchers.Main).launch {
   try {
@@ -66,12 +72,12 @@ CoroutineScope(Dispatchers.Main).launch {
   }
 }
 ```
-5. Запустите измерение:
+6. Запустите измерение:
 ```kotlin
 binding.cameraView.startMeasurements() // запустить представление с измерением
 // binding.cameraView.startWithoutMeasurements() // запустить представление без измерения
 ```
-6. Добавьте подписчики на получение параметров измерения
+7. Добавьте подписчики на получение параметров измерения
 ```kotlin
 binding.cameraView.startWithoutMeasurements()
 CoroutineScope(Dispatchers.Main).launch {
