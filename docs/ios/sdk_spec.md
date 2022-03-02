@@ -1,6 +1,4 @@
 # SDK description
--
-
 ### GalenIT.XP.CoreKit
 - Bluetooth device adaprots
 - License management
@@ -47,6 +45,12 @@
 - Vital measurements module
 
 # Module dependencies
--
-
 ![Scheme](./resources/modules-dependency.jpg)
+
+# Modules XCode documentation
+
+* [CoreSDK](./resources/GalenIT_CoreSDK.doccarchive)
+* [PresentationSDK](./resources/GalenIT_PresentationSDK.doccarchive)
+* [FaceComparisonSDK](./resources/GalenIT_FaceComparison.doccarchive)
+* [RppgSDK](./resources/GalenIT_rppgSDK.doccarchive)
+* [ModulesSDK](./resources/GalenIT_ModulesSDK.doccarchive)
